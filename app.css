@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #00B388;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: inherit;
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid #00B388;
+  margin: 0 0 1em;
+}
+h1 + hr {
+  margin: 0 0 2em;
+}
+
+a {
+  color: #003580;
+  text-decoration: none;
+}
+a:hover {
+  color: #0898FF;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted #003580;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -1px;
+}
+a:active {
+  outline: 0;
+}
+
+.c-colors {
+  padding: 0;
+}
+
+.c-swatch {
+  list-style: none;
+  display: inline-block;
+  height: 10.475em;
+  width: 10.475em;
+  border-radius: 5.2375em;
+  padding: 4.2375em 0.1em 0;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  vertical-align: middle;
+  position: relative;
+  border: 5px solid white;
+  box-shadow: 0 0 1px #4d4d4d;
+}
+.c-swatch:last-of-type {
+  margin-right: 0;
+}
+
+.c-yellow {
+  background-color: #FEDD00;
+  color: #00B388;
+}
+
+.c-green {
+  background-color: #00B388;
+  color: white;
+}
+
+.c-orange {
+  background-color: #FF8200;
+  color: white;
+}
+
+.c-black {
+  background-color: black;
+  color: white;
+}
+
+.c-white {
+  background-color: white;
+  color: #00B388;
+}
+
+.c-darkblue {
+  background-color: #003580;
+  color: white;
+}
+
+.c-lightblue {
+  background-color: #0898FF;
+  color: white;
+}
+
+.o-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.c-pattern {
+  margin-bottom: 2em;
+  position: relative;
+}
+.c-pattern-head {
+  margin: 2em 0;
+  padding: 1em 0;
+  border-bottom: 1px solid #4dcaac;
+}
+
+.u-page-title {
+  font-size: 2.75em;
+}
+.u-page-title small {
+  font-size: .5em;
+  font-weight: normal;
+  color: #00B388;
+}
+
+.u-lead {
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.u-large {
+  font-size: 1.25em;
+}
+
+.u-muted {
+  opacity: 0.7;
+}
+
+.u-meta {
+  font-size: 80%;
+  opacity: 0.7;
+}
+
+.u-font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+.u-font-sf-compact {
+  font-family: San Francisco;
+}
+
+.bg-green, .bg-yellow, .bg-orange, .bg-black, .bg-white, .bg-darkblue, .bg-lightblue {
+  padding: 2em;
+}
+
+.bg-green {
+  background: #00B388;
+  color: white;
+}
+
+.bg-yellow {
+  background: #FEDD00;
+  color: #00B388;
+}
+
+.bg-orange {
+  background: #FF8200;
+  color: white;
+}
+
+.bg-black {
+  background: black;
+  color: white;
+}
+
+.bg-white {
+  background: white;
+  color: #00B388;
+}
+
+.bg-darkblue {
+  background: #003580;
+  color: white;
+}
+
+.bg-lightblue {
+  background: #0898FF;
+  color: white;
+}
+
+.logo-1,
+.logo-i-3 {
+  fill: #FEDD00;
+}
+
+.logo-1, .logo-2, .logo-3,
+.logo-i-1, .logo-i-2, .logo-i-3 {
+  opacity: 0.7;
+}
+
+.logo-2,
+.logo-i-1 {
+  fill: #FF8200;
+}
+
+.logo-3,
+.logo-i-2 {
+  fill: #00B388;
+}
+
+.logo-small {
+  text-align: center;
+  background-color: #e6e6e6;
+}
+.logo-small:before, .logo-small:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.logo-small:after {
+  clear: both;
+}
+.logo-small > div {
+  background-color: white;
+  float: left;
+  padding: 1em;
+  border: 1px dashed #00B388;
+  margin-right: 2%;
+}
+.logo-small > div:last-of-type {
+  margin-right: 0;
+}
+.logo-small span {
+  position: relative;
+  display: block;
+  background-color: #003580;
+}
+.logo-small span:before, .logo-small span:after {
+  width: 145px;
+  height: 16px;
+  font-size: 12px;
+  display: inline-block;
+  background: #4dcaac;
+  color: white;
+  position: absolute;
+  left: 0;
+  padding: 0 0.25em;
+}
+.logo-small span:before {
+  content: "padding: 16px";
+  top: -16px;
+}
+.logo-small span:after {
+  content: "width: 145px";
+  bottom: -16px;
+}
+
+.logo-small .logo-1, .logo-small .logo-2, .logo-small .logo-3,
+.logo-small .logo-i-1, .logo-small .logo-i-2, .logo-small .logo-i-3 {
+  opacity: 1;
+}
+
+.logo-s-1 {
+  fill: white;
+}
+
+.bg-white .logo-s-1,
+.bg-yellow .logo-s-1 {
+  fill: #00B388;
+}

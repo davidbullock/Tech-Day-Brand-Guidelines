@@ -1,0 +1,393 @@
+// MIXINS
+@mixin clear {
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// VARIABLES
+$yellow: #FEDD00; // rgb
+$green: #00B388; // rgb
+$orange: #FF8200; // rgb
+
+$black: black; // rgb
+$white: white; // rgb
+
+$darkblue: #003580; // rgb
+$lightblue: #0898FF; // rgb
+
+$base-unit: 8px;
+$base-font-size: ($base-unit * 2);
+$base-line-height: 1.5;
+
+$color-bg-height: 10.475em;
+
+$font-family-sans-serif:
+	// Safari for OS X and iOS (San Francisco)
+	-apple-system,
+	// Chrome for OS X (San Francisco)
+	BlinkMacSystemFont,
+	// Windows
+	"Segoe UI",
+	// Android
+	"Roboto",
+	// Linux
+	"Oxygen", // KDE
+	"Ubuntu",
+	"Cantarell", // GNOME
+	// Firefox OS [R.I.P.]
+	"Fira Sans",
+	// Older Android
+	"Droid Sans",
+	// Basic web fallback
+	"Helvetica Neue", Arial, sans-serif !default;
+
+$font-family-serif:	Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:	Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$base-font-family: $font-family-sans-serif !default;
+$base-font-family-serif: $font-family-serif !default;
+$base-font-family-console: $font-family-monospace !default;
+
+// BASE
+* {
+	box-sizing: border-box;
+	&:before,
+	&:after{
+		box-sizing: border-box;
+	}
+}
+
+html {
+   font-size: 100%;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $green;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: inherit;
+	font-family: inherit;
+	text-rendering: optimizelegibility;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid $green;
+  margin: 0 0 1em;
+  
+  h1 + & {
+    margin: 0 0 2em;
+  }
+}
+
+a {
+  color: $darkblue;
+  text-decoration: none;
+
+  &:hover {
+    color: $lightblue;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: thin dotted $darkblue;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -1px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    // outline: 0; // this is really bad for accessibility
+  }
+
+  &:active {
+    outline: 0;
+  }
+}
+
+// COLORS
+.c-colors {
+  padding: 0;
+} 
+.c-swatch {
+  list-style: none;
+  display: inline-block;
+  height: $color-bg-height;
+  width: $color-bg-height;
+  border-radius: ($color-bg-height / 2);
+  padding: (($color-bg-height / 2) - 1em) 0.1em 0;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  vertical-align: middle;
+  position: relative;
+  border: 5px solid $white;
+  box-shadow: 0 0 1px tint($black, 30%);
+  
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.c-yellow {
+  background-color: $yellow;
+  color: $green;
+}
+.c-green {
+  background-color: $green;
+  color: $white;
+}
+.c-orange {
+  background-color: $orange;
+  color: $white;
+}
+.c-black {
+  background-color: $black;
+  color: $white;
+}
+.c-white {
+  background-color: $white;
+  color: $green;
+}
+.c-darkblue {
+  background-color: $darkblue;
+  color: $white;
+}
+.c-lightblue {
+  background-color: $lightblue;
+  color: $white;
+}
+
+
+// WRAPPER
+.o-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// PATTERN
+.c-pattern {
+  margin-bottom: 2em;
+  position: relative;
+
+  &-head {
+    margin: 2em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid tint($green, 30%);
+  }
+  
+  &-body {
+  }
+}
+
+// UTILITY
+.u-page-title {
+  font-size: 2.75em;
+  
+  small {
+    font-size: .5em;
+    font-weight: normal;
+    color: $green;
+  }
+}
+
+.u-lead {
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.u-large {
+  font-size: 1.25em;
+}
+
+.u-muted {
+  opacity: 0.7;
+}
+
+.u-meta {
+  font-size: 80%;
+  opacity: 0.7;
+}
+
+// Roboto
+.u-font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+// SF Compact Regular
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+// SF Compact Bold
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+.u-font-sf-compact {
+  font-family: San Francisco;
+}
+
+// BACKGROUNDS
+.bg-green, .bg-yellow, .bg-orange, .bg-black, .bg-white, .bg-darkblue, .bg-lightblue {
+  padding: 2em;
+}
+.bg-green {
+  background: $green;
+  color: $white;
+}
+.bg-yellow {
+  background: $yellow;
+  color: $green;
+}
+.bg-orange {
+  background: $orange;
+  color: $white;
+}
+.bg-black {
+  background: $black;
+  color: $white;
+}
+.bg-white {
+  background: $white;
+  color: $green;
+}
+.bg-darkblue {
+  background: $darkblue;
+  color: $white;
+}
+.bg-lightblue {
+  background: $lightblue;
+  color: $white;
+}
+
+
+// LOGOS
+// logo- linear / logo-i isometric
+.logo-1,
+.logo-i-3 {
+  fill: $yellow;
+}
+.logo-1, .logo-2, .logo-3,
+.logo-i-1, .logo-i-2, .logo-i-3 {
+  opacity: 0.7;
+}
+.logo-2,
+.logo-i-1 {
+  fill: $orange;
+}
+.logo-3,
+.logo-i-2 {
+  fill: $green;
+}
+
+.logo-small {
+  @include clear;
+  text-align: center;
+  background-color: tint($black, 90%);
+  
+  > div {
+    background-color: $white;
+    float: left;
+    padding: 1em;
+    border: 1px dashed $green;
+    margin-right: 2%;
+    
+    &:first-of-type {
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  
+  span {
+    position: relative;
+    display: block;
+    background-color: $darkblue;
+
+    &:before,
+    &:after {
+      width: 145px;
+      height: $base-font-size;
+      font-size: 12px;
+      display: inline-block;
+      background: tint($green, 30%);
+      color: $white;
+      position: absolute;
+      left: 0;
+      padding: 0 0.25em;
+    }
+    &:before {
+      content: "padding: 16px";
+      top: -$base-font-size;
+    }
+    &:after {
+      content: "width: 145px";
+      bottom: -$base-font-size;
+      //bottom: -($base-font-size + ($base-unit / 2));
+    }
+  }
+}
+
+.logo-small .logo-1, .logo-small .logo-2, .logo-small .logo-3,
+.logo-small .logo-i-1, .logo-small .logo-i-2, .logo-small .logo-i-3 {
+  opacity: 1;
+}
+
+// logo isometric simple
+.logo-s-1 {
+  fill: $white;
+}
+.bg-white .logo-s-1,
+.bg-yellow .logo-s-1 {
+  fill: $green;
+}
